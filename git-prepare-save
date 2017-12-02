@@ -14,9 +14,8 @@ echo -e "\n=> Processing git repository..."
 echo -e "\n=> Stashing not commited changes..."
 git stash save  --include-untracked "Saved changes in a stash"
 git gc --aggressive --force
-echo -e "\n=> Will delete:"
-find . -maxdepth 1 \! \( -name .git -o -name . -o -name .. \)
-find . -maxdepth 1 \! \( -name .git -o -name . -o -name .. \)  -exec rm -Rf '{}' \;
+echo -e "\n=> Deleting all files and folders..."
+git rm -rf .
 echo -e "\nDone.\n"
 
 echo -e "To restore working directory content: git reset --hard HEAD"
