@@ -19,4 +19,5 @@ find . -maxdepth 1 \! \( -name .git -o -name . -o -name .. \)
 find . -maxdepth 1 \! \( -name .git -o -name . -o -name .. \)  -exec rm -Rf '{}' \;
 echo -e "\nDone.\n"
 
+echo -e "To restore working directory content: git reset --hard HEAD"
 
